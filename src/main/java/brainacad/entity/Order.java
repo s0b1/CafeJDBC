@@ -7,7 +7,7 @@ public class Order
     private int id;
     private int clientId;
     private int staffId;
-    private String itemType;
+    private String itemType; // "drink" or "dessert"
     private int itemId;
     private LocalDate orderDate;
 
@@ -25,24 +25,70 @@ public class Order
     {
         return id;
     }
+
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+
     public int getClientId()
     {
         return clientId;
     }
+
+    public void setClientId(int clientId)
+    {
+        this.clientId = clientId;
+    }
+
     public int getStaffId()
     {
         return staffId;
     }
+
+    public void setStaffId(int staffId)
+    {
+        this.staffId = staffId;
+    }
+
     public String getItemType()
     {
         return itemType;
     }
+
+    public void setItemType(String itemType)
+    {
+        this.itemType = itemType;
+    }
+
     public int getItemId()
     {
         return itemId;
     }
+
+    public void setItemId(int itemId)
+    {
+        this.itemId = itemId;
+    }
+
     public LocalDate getOrderDate()
     {
         return orderDate;
+    }
+
+    public void setOrderDate(LocalDate orderDate)
+    {
+        this.orderDate = orderDate;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Order{id=" + id +
+                ", clientId=" + clientId +
+                ", staffId=" + staffId +
+                ", itemType='" + itemType + '\'' +
+                ", itemId=" + itemId +
+                ", orderDate=" + orderDate + '}';
     }
 }

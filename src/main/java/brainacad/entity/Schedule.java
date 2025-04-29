@@ -3,16 +3,14 @@ package brainacad.entity;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Schedule
-{
+public class Schedule {
     private int id;
     private int staffId;
     private LocalDate workDate;
     private LocalTime startTime;
     private LocalTime endTime;
 
-    public Schedule(int id, int staffId, LocalDate workDate, LocalTime startTime, LocalTime endTime)
-    {
+    public Schedule(int id, int staffId, LocalDate workDate, LocalTime startTime, LocalTime endTime) {
         this.id = id;
         this.staffId = staffId;
         this.workDate = workDate;
@@ -20,24 +18,53 @@ public class Schedule
         this.endTime = endTime;
     }
 
-    public int getId()
-    {
+    // Getters and Setters
+    public int getId() {
         return id;
     }
-    public int getStaffId()
-    {
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getStaffId() {
         return staffId;
     }
-    public LocalDate getWorkDate()
-    {
+
+    public void setStaffId(int staffId) {
+        this.staffId = staffId;
+    }
+
+    public LocalDate getWorkDate() {
         return workDate;
     }
-    public LocalTime getStartTime()
-    {
+
+    public void setWorkDate(LocalDate workDate) {
+        this.workDate = workDate;
+    }
+
+    public LocalTime getStartTime() {
         return startTime;
     }
-    public LocalTime getEndTime()
-    {
+
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalTime getEndTime() {
         return endTime;
+    }
+
+    public void setEndTime(LocalTime endTime) {
+        this.endTime = endTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Schedule{id=" + id +
+                ", staffId=" + staffId +
+                ", workDate=" + workDate +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime + '}';
     }
 }
